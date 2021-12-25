@@ -6,7 +6,7 @@
             <view class="weui-cells weui-cells_for">
                 <view class="weui-form__control-area">
                     <textarea class="weui-textarea" placeholder="请输入WakaTime API Key" rows="3" spellcheck="false"
-                              bind:blur="onInputBlur"></textarea>
+                              bind:input="onInputBlur"></textarea>
                 </view>
             </view>
         </view>

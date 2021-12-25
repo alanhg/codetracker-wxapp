@@ -1,4 +1,5 @@
 import "weui-miniprogram";
+
 import {getApiTokenKey} from "./utils";
 // app.js
 App({
@@ -20,8 +21,8 @@ App({
       secretApiKey: getApiTokenKey(),
     };
     if (this.globalData.secretApiKey) {
-      wx.navigateTo({
-        url: `/pages/dashboard/index`,
+      wx.redirectTo({
+        url: `/pages/home/index`,
       });
     }
   }

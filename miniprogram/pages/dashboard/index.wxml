@@ -1,7 +1,8 @@
 <!--index.wxml-->
-<view class="container">
-    <view class="top_tip">Dashboard</view>
-    <view class="weui-form">
-            {{key}}
+<view class="weui-flex">
+    <view class="weui-flex__item weui-form">
+        <view class="page__hd">dashboard</view>
     </view>
 </view>
+
+

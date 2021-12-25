@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="weui-flex">
+   <view class="weui-flex__item weui-form">
+      <view class="page__hd">shjezhi</view>
+   </view>
+</view>
+
+

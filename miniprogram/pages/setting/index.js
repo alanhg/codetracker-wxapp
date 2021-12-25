@@ -20,7 +20,7 @@ Page({
     debugger;
     setApiTokenKey(this.data.apiKey);
     wx.redirectTo({
-      url: `/pages/home/index`,
+      url: `/pages/dashboard/index`,
     });
   },
 });
