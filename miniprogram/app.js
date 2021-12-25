@@ -1,3 +1,4 @@
+import "weui-miniprogram";
 // app.js
 App({
   onLaunch: function () {
@@ -14,6 +15,9 @@ App({
       });
     }
 
-    this.globalData = {};
+    this.globalData = {
+      accountInfo: wx.getAccountInfoSync()
+    };
+    console.log('Class: , Function: onLaunch, Line 20, Param: ', this.globalData);
   }
 });
