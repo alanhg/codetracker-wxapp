@@ -8,6 +8,10 @@ export function getApiTokenKey() {
   return wx.getStorageSync('apiTokenKey')
 }
 
+export function removeApiTokenKey() {
+  wx.removeStorageSync("apiTokenKey")
+}
+
 
 const requestWakaTime = ({method = 'get', data, url}) => new Promise((resolve, reject) => {
     wx.request({

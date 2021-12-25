@@ -25,5 +25,11 @@
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "style": "v2",
+  "usingComponents": {
+    "mp-form": "weui-miniprogram/form/form",
+    "mp-dialog": "weui-miniprogram/dialog/dialog",
+    "mp-cells": "weui-miniprogram/cells/cells",
+    "mp-cell": "weui-miniprogram/cell/cell"
+  }
 }

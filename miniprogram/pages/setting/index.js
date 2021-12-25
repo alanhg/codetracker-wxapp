@@ -1,26 +1,11 @@
 // index.js
-import {setApiTokenKey} from "../../utils";
-
-const app = getApp()
+import {removeApiTokenKey} from "../../utils";
 
 Page({
-  data: {
-    accountInfo: app.globalData.accountInfo,
-    apiKey: null
-  },
-
-  onInputBlur(e) {
-    const key = e.detail.value;
-    this.setData({
-      apiKey: key
-    })
-  },
-
   jumpPage() {
-    debugger;
-    setApiTokenKey(this.data.apiKey);
+    removeApiTokenKey();
     wx.redirectTo({
-      url: `/pages/dashboard/index`,
+      url: `/pages/index/index`,
     });
   },
 });
