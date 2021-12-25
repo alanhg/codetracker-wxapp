@@ -1,0 +1,1 @@
+"/Applications/wechatwebdevtools.app/Contents/MacOS/cli" cloud functions deploy --e cloud1-9gsu90wi11e2a5e3 --n quickstartFunctions --r --project "/Users/alanhe/GitHub/codetracker-wxapp" --report_first --report
