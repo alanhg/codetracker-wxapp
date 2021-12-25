@@ -1,7 +1,25 @@
 <!--index.wxml-->
 <view class="weui-flex">
-    <view class="weui-flex__item weui-form">
-        <view class="page__hd">dashboard</view>
+    <view class="weui-flex__item">
+        <view class="weui-panel" wx:if="{{todaySummary}}">
+            今天共码字{{ todaySummary.cummulative_total.text }}
+        </view>
+
+        <view class="weui-panel" wx:if="{{todaySummary}}">
+            操作系统
+        </view>
+        <view class="weui-panel" wx:if="{{todaySummary}}">
+            项目
+        </view>
+        <view class="weui-panel" wx:if="{{todaySummary}}">
+            语言
+        </view>
+        <view class="weui-panel" wx:if="{{todaySummary}}">
+            编辑器
+        </view>
+        <view class="weui-panel" wx:if="{{todaySummary}}">
+            分享
+        </view>
     </view>
 </view>
 

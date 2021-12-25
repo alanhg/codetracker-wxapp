@@ -1,14 +1,17 @@
 // index.js
-import {api} from "../../utils";
+import {api, getToday} from "../../utils";
 
 const app = getApp();
 Page({
   data: {
     accountInfo: app.globalData.accountInfo,
+    todaySummary: null
   },
   onLoad(query) {
-    api.getUserInfo().then(res => {
-      console.log(res);
+    api.getUserSummary(getToday(), getToday()).then(res => {
+      this.setData({
+        todaySummary: res
+      })
     })
   },
 });

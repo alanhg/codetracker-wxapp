@@ -9,11 +9,13 @@ Page({
     key: getApiTokenKey(),
     tabs: [{
       text: "仪表盘",
-      pagePath: '/pages/dashboard/index'
+      pagePath: '/pages/dashboard/index',
+      iconPath: '',
     },
       {
         text: "设置",
-        pagePath: '/pages/setting/index'
+        pagePath: '/pages/setting/index',
+        iconPath: '',
       }],
     currentIdx: 0
   },
