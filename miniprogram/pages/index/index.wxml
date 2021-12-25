@@ -1,19 +1,19 @@
 <!--index.wxml-->
-<view class="container">
-    <view class="top_tip">可视化展示编码活动</view>
-    <view class="weui-form">
-        <view class="weui-form__text-area">
-            WakaTime API Key
-        </view>
-        <view class="weui-cell__bd weui-flex">
-            <input class="weui-input"
-                   value="{{value}}"
-                   bind:blur="onInputBlur"
-            />
+<view class="weui-flex">
+    <view class="weui-flex__item weui-form">
+        <view class="page__hd">可视化展示你的编码活动</view>
+        <view class="weui-cells__group weui-cells__group_form">
+            <view class="weui-cells weui-cells_for">
+                <view class="weui-form__control-area">
+                    <textarea class="weui-textarea" placeholder="请输入WakaTime API Key" rows="3" spellcheck="false"
+                              bind:blur="onInputBlur"></textarea>
+                </view>
+            </view>
         </view>
         <view class="weui-form__opr-area">
             <view aria-role="button" class="weui-btn weui-btn_primary" bind:tap="jumpPage">确定</view>
         </view>
     </view>
-    <view class="environment">当前版本 v{{ accountInfo.miniProgram.version }}</view>
 </view>
+
+

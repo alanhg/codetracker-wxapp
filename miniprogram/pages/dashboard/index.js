@@ -19,4 +19,10 @@ Page({
   jumpPage(e) {
 
   },
+  onShareAppMessage() {
+    return {
+      title: '我已🧱xxx小时',
+      path: '/page/user?id=123'
+    }
+  }
 });

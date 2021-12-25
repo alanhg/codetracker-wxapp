@@ -1,6 +1,5 @@
 {
   "usingComponents": {
-    "cloud-tip-modal": "/components/cloudTipModal/index",
     "mp-form": "weui-miniprogram/form/form",
     "mp-dialog": "weui-miniprogram/dialog/dialog",
     "mp-cells": "weui-miniprogram/cells/cells",
