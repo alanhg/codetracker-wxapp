@@ -1,4 +1,5 @@
 import "weui-miniprogram";
+import {getApiTokenKey} from "./utils";
 // app.js
 App({
   onLaunch: function () {
@@ -14,10 +15,14 @@ App({
         traceUser: true,
       });
     }
-
     this.globalData = {
-      accountInfo: wx.getAccountInfoSync()
+      accountInfo: wx.getAccountInfoSync(),
+      secretApiKey: getApiTokenKey(),
     };
-    console.log('Class: , Function: onLaunch, Line 20, Param: ', this.globalData);
+    if (this.globalData.secretApiKey) {
+      wx.navigateTo({
+        url: `/pages/dashboard/index`,
+      });
+    }
   }
 });
