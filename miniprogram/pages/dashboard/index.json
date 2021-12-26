@@ -2,5 +2,6 @@
   "usingComponents": {
     "mp-tabbar": "weui-miniprogram/tabbar/tabbar",
     "ec-canvas": "echarts-for-weixin"
-  }
+  },
+  "enablePullDownRefresh": true
 }

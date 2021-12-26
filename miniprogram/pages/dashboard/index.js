@@ -8,10 +8,20 @@ Page({
     todaySummary: null
   },
   onLoad(query) {
-    api.getUserSummary(getToday(), getToday()).then(res => {
-      this.setData({
-        todaySummary: res
-      })
+    wx.showLoading({
+      title: '加载中',
+    })
+    this.refresh().then(() => {
+      wx.hideLoading();
     })
   },
+  onPullDownRefresh: function () {
+    this.refresh();
+  },
+  refresh: async function () {
+    const res = await api.getUserSummary(getToday(), getToday());
+    this.setData({
+      todaySummary: res
+    });
+  }
 });
