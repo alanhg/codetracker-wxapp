@@ -1,6 +1,6 @@
 <view>
     <view bind:tap="toggle">
-        {{title}}：{{dataset[0].name}}（{{dataset[0].percent}}%）
+        {{title}}：<text class="{{collapsed?'':'transparent'}}">{{dataset[0].name}}（{{dataset[0].percent}}%）</text>
         <mp-icon icon="info" color="black" size="{{14}}" wx:if="{{dataset.length>1}}"></mp-icon>
     </view>
     <view wx:if="{{dataset.length>1}}"

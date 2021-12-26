@@ -2,6 +2,10 @@
     display: none;
 }
 
+.transparent {
+    opacity: 0;
+}
+
 .collapse-detail {
     background: rgba(255, 255, 255, .6);
     width: 550rpx;
