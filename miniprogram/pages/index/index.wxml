@@ -1,19 +1,13 @@
-<!--index.wxml-->
-<view class="weui-flex">
-    <view class="weui-flex__item weui-form">
-        <view class="page__hd">可视化展示你的编码活动</view>
-        <view class="weui-cells__group weui-cells__group_form">
-            <view class="weui-cells weui-cells_for">
-                <view class="weui-form__control-area">
-                    <textarea class="weui-textarea" placeholder="请输入WakaTime API Key" rows="3" spellcheck="false"
-                              bind:input="onInputBlur"></textarea>
-                </view>
+<mp-form-page subtitle="可视化展示你的编码活动">
+    <mp-toptips msg="{{errorMsg}}" type="error" show="{{errorMsg}}" delay="1500"></mp-toptips>
+        <label for="apiKey">
+            <view>
+                <input id="apiKey" class="weui-input"
+                       placeholder-class="weui-input__placeholder"
+                       placeholder="请输入WakaTime API Key" rows="3" spellcheck="false" bind:input="onInputBlur"/>
             </view>
-        </view>
-        <view class="weui-form__opr-area">
-            <view aria-role="button" class="weui-btn weui-btn_primary" bind:tap="jumpPage">确定</view>
-        </view>
+        </label>
+    <view slot="button">
+        <button class="weui-btn" type="primary" bindtap="jumpPage">确定</button>
     </view>
-</view>
-
-
+</mp-form-page>

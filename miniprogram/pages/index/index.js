@@ -6,7 +6,8 @@ const app = getApp()
 Page({
   data: {
     accountInfo: app.globalData.accountInfo,
-    apiKey: null
+    apiKey: null,
+    errorMsg: null
   },
 
   onInputBlur(e) {
@@ -17,6 +18,15 @@ Page({
   },
 
   jumpPage() {
+    if (!this.data.apiKey || !this.data.apiKey.trim()) {
+      this.setData({
+        errorMsg: '请输入Key'
+      })
+      return
+    }
+    this.setData({
+      errorMsg: null
+    })
     setApiTokenKey(this.data.apiKey);
     wx.redirectTo({
       url: `/pages/home/index`,
