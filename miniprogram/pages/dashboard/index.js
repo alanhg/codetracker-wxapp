@@ -7,22 +7,21 @@ Page({
     todaySummary: null,
     selectedDetailType: null
   },
-  onLoad(query) {
-    wx.showLoading({
-      title: '数据加载中',
-    })
-    this.refresh().then(() => {
-      wx.hideLoading();
-    })
+  onLoad() {
+    this.refresh();
   },
   onPullDownRefresh: function () {
     this.refresh();
   },
   refresh: async function () {
+    wx.showLoading({
+      title: '数据加载中',
+    })
     const res = await api.getUserSummary(getToday(), getToday());
     this.setData({
       todaySummary: res,
     });
+    wx.hideLoading();
   },
   onDetailClick: function (e) {
     if (this.data.selectedDetailType === e.currentTarget.dataset.type) {
