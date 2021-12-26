@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/login/index",
     "pages/home/index",
     "pages/dashboard/index",
     "pages/setting/index"
@@ -9,11 +9,15 @@
     "list": [
       {
         "text": "仪表盘",
-        "pagePath": "pages/dashboard/index"
+        "pagePath": "pages/dashboard/index",
+        "iconPath": "/images/dashboard.png",
+        "selectedIconPath": "/images/dashboard-selected.png"
       },
       {
         "text": "设置",
-        "pagePath": "pages/setting/index"
+        "pagePath": "pages/setting/index",
+        "iconPath": "/images/setting.png",
+        "selectedIconPath": "/images/setting-selected.png"
       }
     ]
   },

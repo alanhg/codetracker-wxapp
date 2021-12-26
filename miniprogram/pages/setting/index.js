@@ -5,7 +5,7 @@ Page({
   jumpPage() {
     removeApiTokenKey();
     wx.redirectTo({
-      url: `/pages/index/index`,
+      url: `/pages/login/index`,
     });
   },
 });

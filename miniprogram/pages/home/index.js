@@ -1,5 +1,5 @@
 // index.js
-import {api, getApiTokenKey} from "../../utils";
+import {getApiTokenKey} from "../../utils";
 
 const app = getApp()
 
@@ -10,12 +10,10 @@ Page({
     tabs: [{
       text: "仪表盘",
       pagePath: '/pages/dashboard/index',
-      iconPath: '',
     },
       {
         text: "设置",
         pagePath: '/pages/setting/index',
-        iconPath: '',
       }],
     currentIdx: 0
   },
