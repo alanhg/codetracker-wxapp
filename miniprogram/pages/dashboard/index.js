@@ -34,5 +34,13 @@ Page({
         selectedDetailType: e.currentTarget.dataset.type
       })
     }
+  },
+  onShareAppMessage: function () {
+    return {
+      title: '我今天搬砖' + this.data.todaySummary.cummulative_total.text,
+      desc: '来看看吧',
+      path: '/page/index', // 路径，传递参数到指定页面。
+      imageUrl: '/images/bricklayer-pana.png'
+    }
   }
 });

@@ -1,13 +1,13 @@
-<mp-form-page subtitle="可视化展示你的编码活动">
+<mp-form-page subtitle="可视化展示你的编码活动" class="login-page">
     <mp-toptips msg="{{errorMsg}}" type="error" show="{{errorMsg}}" delay="1500"></mp-toptips>
-        <label for="apiKey">
-            <view>
-                <input id="apiKey" class="weui-input"
-                       placeholder-class="weui-input__placeholder"
-                       placeholder="请输入WakaTime API Key" rows="3" spellcheck="false" bind:input="onInputBlur"
-                       bindconfirm="jumpPage"/>
-            </view>
-        </label>
+    <label for="apiKey">
+        <view>
+            <textarea auto-height  id="apiKey" class="weui-input login-input"
+                   placeholder-class="weui-input__placeholder"
+                   placeholder="请输入WakaTime API Key" rows="3" spellcheck="false" bind:input="onInputBlur"
+                   bindconfirm="jumpPage"/>
+        </view>
+    </label>
     <view slot="button">
         <button class="weui-btn" type="primary" bindtap="jumpPage">确定</button>
     </view>
