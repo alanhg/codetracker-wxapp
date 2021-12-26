@@ -6,7 +6,7 @@
     <view wx:if="{{dataset.length>1}}"
           class="{{collapsed?'hidden':''}} collapse-detail">
         <view wx:for="{{dataset}}">
-            {{item.name}}（{{item.percent}}%）
+            {{item.name}}（{{item.percent}}%）（{{item.text}}）
         </view>
     </view>
 </view>
