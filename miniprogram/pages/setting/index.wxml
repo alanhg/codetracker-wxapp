@@ -1,5 +1,4 @@
-<!--index.wxml-->
-<view class="weui-flex">
+<view class="page">
     <mp-cells>
         <mp-cell>
             <button class="weui-btn" style="width:100%;" type="primary" bind:tap="jumpPage">删除WakaTime API Key</button>

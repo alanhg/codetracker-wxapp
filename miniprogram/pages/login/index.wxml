@@ -4,7 +4,8 @@
             <view>
                 <input id="apiKey" class="weui-input"
                        placeholder-class="weui-input__placeholder"
-                       placeholder="请输入WakaTime API Key" rows="3" spellcheck="false" bind:input="onInputBlur"/>
+                       placeholder="请输入WakaTime API Key" rows="3" spellcheck="false" bind:input="onInputBlur"
+                       bindconfirm="jumpPage"/>
             </view>
         </label>
     <view slot="button">

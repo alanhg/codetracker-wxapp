@@ -1,23 +1,30 @@
 <!--index.wxml-->
-<view class="weui-article">
-    <view wx:if="{{todaySummary}}">
-        今天共码字{{ todaySummary.cummulative_total.text }}
+<view class="page dashboard">
+    <view class="weui-flex">
+        <view wx:if="{{todaySummary}}" class="weui-flex__item">
+            今天你已码字
+            <view class="highlight">
+                {{ todaySummary.cummulative_total.text }}
+            </view>
+        </view>
     </view>
-
-    <view wx:if="{{todaySummary}}">
-        操作系统
-    </view>
-    <view wx:if="{{todaySummary}}">
-        项目
-    </view>
-    <view wx:if="{{todaySummary}}">
-        语言
-    </view>
-    <view wx:if="{{todaySummary}}">
-        编辑器
-    </view>
-    <view wx:if="{{todaySummary}}">
-        分享
+    <view class="dashboard-body">
+        <view wx:if="{{todaySummary}}">
+            参与项目：{{todaySummary.data[0].projects[0].name}}（{{todaySummary.data[0].projects[0].percent}}%）
+            <mp-icon icon="info" color="black" size="{{14}}"></mp-icon>
+        </view>
+        <view wx:if="{{todaySummary}}">
+            开发语言：{{todaySummary.data[0].languages[0].name}}（{{todaySummary.data[0].languages[0].percent}}%）
+            <mp-icon icon="info" color="black" size="{{14}}"></mp-icon>
+        </view>
+        <view wx:if="{{todaySummary}}">
+            编辑器：{{todaySummary.data[0].editors[0].name}}（{{todaySummary.data[0].editors[0].percent}}%）
+            <mp-icon icon="info" color="black" size="{{14}}"></mp-icon>
+        </view>
+        <view wx:if="{{todaySummary}}">
+            操作系统：{{todaySummary.data[0].operating_systems[0].name}}（{{todaySummary.data[0].operating_systems[0].percent}}%）
+            <mp-icon icon="info" color="black" size="{{14}}"></mp-icon>
+        </view>
     </view>
 </view>
 
