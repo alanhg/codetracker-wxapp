@@ -9,7 +9,7 @@
         </view>
     </view>
     <view class="dashboard-body">
-        <view wx:if="{{todaySummary}}">
+        <view wx:if="{{todaySummary}}" bind:tap="showDetailModal">
             参与项目：{{todaySummary.data[0].projects[0].name}}（{{todaySummary.data[0].projects[0].percent}}%）
             <mp-icon icon="info" color="black" size="{{14}}"></mp-icon>
         </view>
@@ -26,6 +26,18 @@
             <mp-icon icon="info" color="black" size="{{14}}"></mp-icon>
         </view>
     </view>
+    <mp-dialog
+            show="{{showDetailModal}}"
+            maskClosable="{{true}}"
+            title="参与项目"
+            desc=""
+            buttons="{{buttons}}"
+    >
+        <view>
+            hello world
+        </view>
+    </mp-dialog>
 </view>
+
 
 

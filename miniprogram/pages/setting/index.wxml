@@ -1,9 +1,5 @@
 <view class="page">
-    <mp-cells>
-        <mp-cell>
-            <button class="weui-btn" style="width:100%;" type="primary" bind:tap="jumpPage">删除WakaTime API Key</button>
-        </mp-cell>
-    </mp-cells>
+    <button class="weui-btn" type="primary" bind:tap="jumpPage">删除WakaTime API Key</button>
 </view>
 
 

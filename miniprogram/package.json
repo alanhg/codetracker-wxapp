@@ -4,8 +4,6 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
-    "echarts": "^5.2.2",
-    "echarts-for-weixin": "^1.0.2",
     "js-base64": "^3.7.2",
     "weui-miniprogram": "^1.2.2"
   },

@@ -14,6 +14,7 @@
 }
 
 .dashboard {
+    font-size: 24rpx;
     background-size: 114%;
     background-repeat: no-repeat;
     background-position: -110rpx 432rpx;

@@ -6,6 +6,8 @@ Page({
   data: {
     accountInfo: app.globalData.accountInfo,
     todaySummary: null,
+    showDetailModal: false,
+    detailModalData: {}
   },
   onLoad(query) {
     wx.showLoading({
@@ -23,5 +25,10 @@ Page({
     this.setData({
       todaySummary: res,
     });
+  },
+  showDetailModal: function () {
+    this.setData({
+      showDetailModal: true
+    })
   }
 });

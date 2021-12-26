@@ -1,5 +1,3 @@
-import "weui-miniprogram";
-
 import {getApiTokenKey} from "./utils";
 // app.js
 App({
