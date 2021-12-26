@@ -1,11 +1,8 @@
 // index.js
 import {getApiTokenKey} from "../../utils";
 
-const app = getApp()
-
 Page({
   data: {
-    accountInfo: app.globalData.accountInfo,
     key: getApiTokenKey(),
     tabs: [{
       text: "仪表盘",

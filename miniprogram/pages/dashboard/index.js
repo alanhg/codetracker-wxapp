@@ -4,7 +4,6 @@ import {api, getToday} from "../../utils";
 const app = getApp();
 Page({
   data: {
-    accountInfo: app.globalData.accountInfo,
     todaySummary: null,
     selectedDetailType: null
   },

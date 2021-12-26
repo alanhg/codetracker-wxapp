@@ -5,7 +5,6 @@ const app = getApp()
 
 Page({
   data: {
-    accountInfo: app.globalData.accountInfo,
     apiKey: null,
     errorMsg: null
   },
