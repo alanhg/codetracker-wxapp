@@ -6,6 +6,7 @@
     padding: 40rpx 16rpx;
     background-color: var(--weui-BG-0);
     font-size: 22rpx;
+    overflow: hidden;
 }
 
 .highlight {
@@ -24,3 +25,4 @@
 .dashboard-body {
     line-height: 50rpx;
 }
+

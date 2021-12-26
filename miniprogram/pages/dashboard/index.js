@@ -6,8 +6,7 @@ Page({
   data: {
     accountInfo: app.globalData.accountInfo,
     todaySummary: null,
-    showDetailModal: false,
-    detailModalData: {}
+    selectedDetailType: null
   },
   onLoad(query) {
     wx.showLoading({
@@ -26,9 +25,15 @@ Page({
       todaySummary: res,
     });
   },
-  showDetailModal: function () {
-    this.setData({
-      showDetailModal: true
-    })
+  onDetailClick: function (e) {
+    if (this.data.selectedDetailType === e.currentTarget.dataset.type) {
+      this.setData({
+        selectedDetailType: null
+      })
+    } else {
+      this.setData({
+        selectedDetailType: e.currentTarget.dataset.type
+      })
+    }
   }
 });

@@ -9,34 +9,11 @@
         </view>
     </view>
     <view class="dashboard-body">
-        <view wx:if="{{todaySummary}}" bind:tap="showDetailModal">
-            参与项目：{{todaySummary.data[0].projects[0].name}}（{{todaySummary.data[0].projects[0].percent}}%）
-            <mp-icon icon="info" color="black" size="{{14}}"></mp-icon>
-        </view>
-        <view wx:if="{{todaySummary}}">
-            开发语言：{{todaySummary.data[0].languages[0].name}}（{{todaySummary.data[0].languages[0].percent}}%）
-            <mp-icon icon="info" color="black" size="{{14}}"></mp-icon>
-        </view>
-        <view wx:if="{{todaySummary}}">
-            编辑器：{{todaySummary.data[0].editors[0].name}}（{{todaySummary.data[0].editors[0].percent}}%）
-            <mp-icon icon="info" color="black" size="{{14}}"></mp-icon>
-        </view>
-        <view wx:if="{{todaySummary}}">
-            操作系统：{{todaySummary.data[0].operating_systems[0].name}}（{{todaySummary.data[0].operating_systems[0].percent}}%）
-            <mp-icon icon="info" color="black" size="{{14}}"></mp-icon>
-        </view>
+        <custom-collapse-item id="project" title="参与项目" dataset="{{todaySummary.data[0].projects}}"/>
+        <custom-collapse-item id="languages" title="开发语言" dataset="{{todaySummary.data[0].languages}}"/>
+        <custom-collapse-item id="editors" title="编辑器" dataset="{{todaySummary.data[0].editors}}"/>
+        <custom-collapse-item id="operating_systems" title="操作系统" dataset="{{todaySummary.data[0].operating_systems}}"/>
     </view>
-    <mp-dialog
-            show="{{showDetailModal}}"
-            maskClosable="{{true}}"
-            title="参与项目"
-            desc=""
-            buttons="{{buttons}}"
-    >
-        <view>
-            hello world
-        </view>
-    </mp-dialog>
 </view>
 
 

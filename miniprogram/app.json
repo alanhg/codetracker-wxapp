@@ -37,6 +37,7 @@
     "mp-toptips": "weui-miniprogram/toptips/toptips",
     "mp-icon": "weui-miniprogram/icon/icon",
     "mp-dialog": "weui-miniprogram/dialog/dialog",
-    "mp-tabbar": "weui-miniprogram/tabbar/tabbar"
+    "mp-tabbar": "weui-miniprogram/tabbar/tabbar",
+    "custom-collapse-item": "pages/collapse-item/index"
   }
 }

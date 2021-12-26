@@ -1,0 +1,12 @@
+<view>
+    <view bind:tap="toggle">
+        {{title}}：{{dataset[0].name}}（{{dataset[0].percent}}%）
+        <mp-icon icon="info" color="black" size="{{14}}" wx:if="{{dataset.length>1}}"></mp-icon>
+    </view>
+    <view wx:if="{{dataset.length>1}}"
+          class="{{collapsed?'hidden':''}} collapse-detail">
+        <view wx:for="{{dataset}}">
+            {{item.name}}（{{item.percent}}%）
+        </view>
+    </view>
+</view>
