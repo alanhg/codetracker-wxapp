@@ -37,10 +37,10 @@ const requestWakaTime = ({method = 'get', data, url, params = {}}) => new Promis
 
 export const api = {
   getUserInfo: () => requestWakaTime({
-    url: '/api/v1/users/current'
+    url: '/users/current'
   }),
   getUserSummary: (start, end) => requestWakaTime({
-    url: '/api/v1/users/current/summaries',
+    url: '/users/current/summaries',
     params: {
       start,
       end
