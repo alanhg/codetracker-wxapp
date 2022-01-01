@@ -40,6 +40,8 @@
     "mp-tabbar": "weui-miniprogram/tabbar/tabbar",
     "mp-actionSheet": "weui-miniprogram/actionsheet/actionsheet",
     "custom-collapse-item": "components/collapse-item/index",
-    "custom-timespan-selector": "components/timespan-selector/index"
+    "custom-timespan-selector": "components/timespan-selector/index",
+    "mp-cells": "weui-miniprogram/cells/cells",
+    "mp-cell": "weui-miniprogram/cell/cell"
   }
 }

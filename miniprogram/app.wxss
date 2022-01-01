@@ -26,9 +26,8 @@
     line-height: 50rpx;
 }
 
-
 .timer {
-    text-decoration: underline;
     font-weight: 700;
-    color: #3c5059;
+    color: #1485ee;
+    text-decoration: underline;
 }

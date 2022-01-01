@@ -16,7 +16,6 @@ export function removeApiTokenKey() {
   wx.removeStorageSync("apiTokenKey")
 }
 
-
 export function setDefaultTimeSpan(timespan) {
   wx.setStorageSync("defaultTimeSpan", timespan)
 }

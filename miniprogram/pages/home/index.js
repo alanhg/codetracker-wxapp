@@ -12,7 +12,7 @@ Page({
         text: "设置",
         pagePath: '/pages/setting/index',
       }],
-    currentIdx: 1
+    currentIdx: 0
   },
   onLoad(query) {
     wx.hideHomeButton();
@@ -27,7 +27,6 @@ Page({
     }
   },
   tabChange: function (event) {
-
     wx.switchTab({
       url: event.detail.item.pagePath,
       success: () => {
