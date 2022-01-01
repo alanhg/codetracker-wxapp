@@ -44,8 +44,37 @@ export const api = {
   }),
 };
 
+export function formatDate(d) {
+  return `${d.getFullYear()}-${("0" + (d.getMonth() + 1)).slice(-2)}-${(`0${d.getDate()}`).slice(-2)}`
+}
 
-export const getToday = () => {
+/**
+ * @description 默认为当天
+ */
+export const getDate = (offset = 0) => {
   const d = new Date();
-  return `${d.getFullYear()}-${("0" + (d.getMonth() + 1)).slice(-2)}-${(`0${d.getDate()}`).slice(-2)}`;
+  d.setDate(d.getDate() + offset);
+  return d;
+}
+
+export const getStartOfWeek = () => {
+  const d = new Date();
+  d.setDate(d.getDate() - d.getDay() + 1);
+  return d;
+}
+
+export const getEndOfWeek = () => {
+  const d = new Date();
+  d.setDate(d.getDate() - d.getDay() + 7);
+  return d;
+}
+
+export const getStartOfMonth = () => {
+  const date = new Date();
+  return new Date(date.getFullYear(), date.getMonth(), 1);
+}
+
+export const getEndOfMonth = () => {
+  const date = new Date();
+  return new Date(date.getFullYear(), date.getMonth() + 1, 0);
 }

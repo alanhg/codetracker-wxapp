@@ -2,7 +2,7 @@
 <view class="page dashboard">
     <view class="weui-flex">
         <view wx:if="{{todaySummary}}" class="weui-flex__item">
-            今天你已码字
+            <text class="timer" bind:tap="timerSelectorShowClick">{{selectedTimeType.text}}</text>你已码字
             <view class="highlight">
                 {{ todaySummary.cummulative_total.text }}
             </view>
@@ -14,7 +14,11 @@
         <custom-collapse-item id="editors" title="编辑器" dataset="{{todaySummary.data[0].editors}}"/>
         <custom-collapse-item id="operating_systems" title="操作系统" dataset="{{todaySummary.data[0].operating_systems}}"/>
     </view>
+    <mp-actionSheet bindactiontap="timerSelectorClick" show="{{showTimeSelector}}" actions="{{timeSelectorGroups}}"
+                    title="统计时间区间"
+                    show-cancel="{{false}}"
+    >
+    </mp-actionSheet>
 </view>
-
 
 
