@@ -1,0 +1,5 @@
+<mp-actionSheet bindactiontap="timerSelectorClick" show="{{showTimeSelector}}" actions="{{timeSelectorGroups}}"
+                title="统计时间区间"
+                show-cancel="{{false}}"
+>
+</mp-actionSheet>

@@ -38,7 +38,8 @@
     "mp-icon": "weui-miniprogram/icon/icon",
     "mp-dialog": "weui-miniprogram/dialog/dialog",
     "mp-tabbar": "weui-miniprogram/tabbar/tabbar",
-    "custom-collapse-item": "pages/collapse-item/index",
-    "mp-actionSheet": "weui-miniprogram/actionsheet/actionsheet"
+    "mp-actionSheet": "weui-miniprogram/actionsheet/actionsheet",
+    "custom-collapse-item": "components/collapse-item/index",
+    "custom-timespan-selector": "components/timespan-selector/index"
   }
 }

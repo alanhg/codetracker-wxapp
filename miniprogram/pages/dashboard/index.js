@@ -1,5 +1,5 @@
 // index.js
-import {api, formatDate, getTimeSpan, timeSelectorType} from "../../utils";
+import {api, formatDate, getDefaultTimeSpan, getTimeSpan, timeSelectorType} from "../../utils";
 
 const app = getApp();
 
@@ -7,16 +7,13 @@ Page({
   data: {
     todaySummary: null,
     selectedDetailType: null,
-    showTimeSelector: false,
     // 选择的时间区间
-    selectedTimeType: timeSelectorType.today,
-    timeSelectorGroups: Object.keys(timeSelectorType).map(item => ({
-      text: timeSelectorType[item].text,
-      value: timeSelectorType[item].value
-    }))
+    selectedTimeType: null,
   },
-  onLoad() {
-    this.refresh();
+  onShow() {
+    this.setData({
+      selectedTimeType: getDefaultTimeSpan(),
+    }, this.refresh)
   },
   onPullDownRefresh: function () {
     this.refresh();
@@ -51,15 +48,13 @@ Page({
       imageUrl: '/images/bricklayer-pana.png'
     }
   },
-  timerSelectorClick: function ({detail}) {
+  timerSelectorClick: function ({detail: selectedTimeType}) {
     this.setData({
-      selectedTimeType: this.data.timeSelectorGroups[detail.index],
-      showTimeSelector: false,
+      selectedTimeType,
     }, this.refresh)
   },
   timerSelectorShowClick: function () {
-    this.setData({
-      showTimeSelector: true,
-    })
+    const child = this.selectComponent('#timeSpanSelector');
+    child.timerSelectorShowClick();
   }
 });

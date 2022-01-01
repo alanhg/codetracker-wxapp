@@ -16,6 +16,15 @@ export function removeApiTokenKey() {
   wx.removeStorageSync("apiTokenKey")
 }
 
+
+export function setDefaultTimeSpan(timespan) {
+  wx.setStorageSync("defaultTimeSpan", timespan)
+}
+
+export function getDefaultTimeSpan() {
+  return wx.getStorageSync("defaultTimeSpan") || timeSelectorType.today
+}
+
 const stringify = params => Object.keys(params).map(k => k + '=' + params[k]).join('&');
 const requestWakaTime = ({method = 'get', data, url, params = {}}) => new Promise((resolve, reject) => {
     wx.request({

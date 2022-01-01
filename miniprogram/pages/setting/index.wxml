@@ -1,5 +1,25 @@
 <view class="page">
-    <button class="weui-btn" type="primary" bind:tap="jumpPage">删除WakaTime API Key</button>
+    <view class="weui-cells">
+        <label for="js_input1" class="weui-cell weui-cell_access">
+            <view class="weui-cell__hd">
+                <text class="weui-label">API Key</text>
+            </view>
+            <view class="weui-cell__bd">
+                <input id="js_input1" class="weui-input" placeholder="******"/>
+            </view>
+            <view class="weui-cell__ft"></view>
+        </label>
+        <label for="js_input2" class="weui-cell weui-cell_access">
+            <view class="weui-cell__hd">
+                <text class="weui-label">默认统计\n时间区间</text>
+            </view>
+            <view class="weui-cell__bd" bind:tap="timerSelectorShowClick">
+                {{selectedTimeType.text}}
+            </view>
+            <view class="weui-cell__ft">
+
+            </view>
+        </label>
+    </view>
 </view>
-
-
+<custom-timespan-selector bindselectevent="timerSelectorClick" id="timeSpanSelector"/>

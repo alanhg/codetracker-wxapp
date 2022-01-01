@@ -12,12 +12,12 @@ Page({
         text: "设置",
         pagePath: '/pages/setting/index',
       }],
-    currentIdx: 0
+    currentIdx: 1
   },
   onLoad(query) {
     wx.hideHomeButton();
     wx.switchTab({
-      url: this.data.tabs[0].pagePath
+      url: this.data.tabs[this.data.currentIdx].pagePath
     })
   },
   onShareAppMessage() {
