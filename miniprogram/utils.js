@@ -1,4 +1,8 @@
 const Base64 = require('miniprogram_npm/js-base64/index');
+/**
+ * https://wakatime.com
+ */
+const API = 'https://wakatime.1991421.cn';
 
 export function setApiTokenKey(key) {
   wx.setStorageSync("apiTokenKey", key)
@@ -15,7 +19,7 @@ export function removeApiTokenKey() {
 const stringify = params => Object.keys(params).map(k => k + '=' + params[k]).join('&');
 const requestWakaTime = ({method = 'get', data, url, params = {}}) => new Promise((resolve, reject) => {
     wx.request({
-      url: `https://wakatime.com${url}?${stringify(params)}`,
+      url: `${API}${url}?${stringify(params)}`,
       data,
       method,
       header: {
