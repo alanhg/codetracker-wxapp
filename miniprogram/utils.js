@@ -78,3 +78,34 @@ export const getEndOfMonth = () => {
   const date = new Date();
   return new Date(date.getFullYear(), date.getMonth() + 1, 0);
 }
+export const timeSelectorType = {
+  today: {
+    value: 'today',
+    text: '今天'
+  },
+  latest7: {
+    value: 'latest7',
+    text: '最近7天'
+  },
+  thisWeek: {
+    value: 'thisWeek',
+    text: '本周'
+  },
+  thisMonth: {
+    value: 'thisMonth',
+    text: '本月'
+  }
+}
+
+export function getTimeSpan(type) {
+  if (type === timeSelectorType.latest7.value) {
+    return [getDate(-6), getDate()]
+  }
+  if (type === timeSelectorType.thisWeek.value) {
+    return [getStartOfWeek(), getEndOfWeek()]
+  }
+  if (type === timeSelectorType.thisMonth.value) {
+    return [getStartOfMonth(), getEndOfMonth()]
+  }
+  return [getDate(), getDate()]
+}

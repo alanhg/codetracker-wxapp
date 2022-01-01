@@ -1,39 +1,7 @@
 // index.js
-import {api, formatDate, getDate, getEndOfMonth, getEndOfWeek, getStartOfMonth, getStartOfWeek} from "../../utils";
+import {api, formatDate, getTimeSpan, timeSelectorType} from "../../utils";
 
 const app = getApp();
-
-const timeSelectorType = {
-  today: {
-    value: 'today',
-    text: '今天'
-  },
-  latest7: {
-    value: 'latest7',
-    text: '最近7天'
-  },
-  thisWeek: {
-    value: 'thisWeek',
-    text: '本周'
-  },
-  thisMonth: {
-    value: 'thisMonth',
-    text: '本月'
-  }
-}
-
-function getTimeSpan(type) {
-  if (type === timeSelectorType.latest7.value) {
-    return [getDate(-6), getDate()]
-  }
-  if (type === timeSelectorType.thisWeek.value) {
-    return [getStartOfWeek(), getEndOfWeek()]
-  }
-  if (type === timeSelectorType.thisMonth.value) {
-    return [getStartOfMonth(), getEndOfMonth()]
-  }
-  return [getDate(), getDate()]
-}
 
 Page({
   data: {
