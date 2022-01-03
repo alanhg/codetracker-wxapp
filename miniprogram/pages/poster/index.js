@@ -44,9 +44,9 @@ Page({
         url: 'https://static.1991421.cn/codetracker/bricklayer-pana.png',
         mode: 'aspectFill',
         css: {
-          top: '564rpx',
-          left: '-110rpx',
-          width: '750rpx',
+          top: '350rpx',
+          left: '-180rpx',
+          width: '1000rpx',
         },
       },
       {
