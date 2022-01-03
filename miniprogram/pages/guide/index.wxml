@@ -4,10 +4,10 @@
     WakaTime是个全自动化的时间追踪工具，依赖于大量的IDE插件及文本编辑器，可以对我们从事coding活动所花费的时间进行可视化展示，让你明白在那些时间里，都做了什么。
 </view>
 <view class="h2">
-    1. 访问https://wakatime.com/login，注册账号
+    1. 访问<text selectable="{{true}}">https://wakatime.com/login</text>，注册账号
 </view>
 <view class="h2">
-    2. 访问https://wakatime.com/settings/account，拷贝API key
+    2. 访问<text selectable="{{true}}">https://wakatime.com/settings/account</text>，拷贝API key
     <image src="https://static.1991421.cn/2022/2022-01-03-220831.jpeg" mode="aspectFit"/>
 </view>
 <view class="h2">

@@ -60,3 +60,15 @@ page {
 .h2 {
     padding-top: 10px;
 }
+
+.mt-1n {
+    margin-top: 5rpx;
+}
+
+.mt-2n {
+    margin-top: 10rpx;
+}
+
+.mt-4n {
+    margin-top: 20rpx;
+}

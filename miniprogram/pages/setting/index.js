@@ -39,5 +39,11 @@ Page({
     }, () => {
       setApiTokenKey(this.data.apiKey)
     })
+  },
+  logoutClick: function () {
+    removeApiTokenKey();
+    wx.redirectTo({
+      url: '/pages/login/index'
+    })
   }
 });

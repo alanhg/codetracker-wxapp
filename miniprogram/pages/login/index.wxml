@@ -9,8 +9,9 @@
                 <div class="weui-cell weui-cell_active">
                     <div class="weui-cell__bd">
                         <textarea id="apiKey" class="weui-input login-input"
+                                  rows="3"
                                   placeholder-class="weui-input__placeholder"
-                                  placeholder="请输入WakaTime API Key" rows="3" spellcheck="false"
+                                  placeholder="请输入WakaTime API Key" spellcheck="false"
                                   bind:input="onInputBlur"
                                   bindconfirm="jumpPage"/>
                     </div>
@@ -22,6 +23,7 @@
         <button class="weui-btn" type="primary" bindtap="jumpPage">确定</button>
     </div>
     <div class="footer">
-        WakaTime使用及API Key获取，戳这里<mp-icon icon="info" color="rgba(0, 0, 0, 0.5)" size="{{22}}" bind:tap="helpClick"></mp-icon>
+        WakaTime使用及API Key获取，戳这里
+        <mp-icon icon="info" color="rgba(0, 0, 0, 0.5)" size="{{22}}" bind:tap="helpClick"></mp-icon>
     </div>
 </div>

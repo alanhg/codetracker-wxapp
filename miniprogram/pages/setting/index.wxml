@@ -21,7 +21,7 @@
             </view>
         </label>
     </view>
-    <button>退出</button>
+    <button bind:tap="logoutClick" class="weui-btn weui-btn_default mt-4n">退出</button>
 </view>
 <mp-dialog show="{{showApiKeyConfirm}}" buttons="{{[{text:'确定'}]}}" bindbuttontap="onApiKeyConfirm">
     确定修改？
