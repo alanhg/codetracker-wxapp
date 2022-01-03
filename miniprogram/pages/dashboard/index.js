@@ -28,8 +28,7 @@ Page({
   },
   onShareAppMessage: function () {
     return {
-      title: `我${this.data.selectedTimeType.text}🧱${this.data.todaySummary.cummulative_total.text}，瞅瞅你呢？`,
-      path: '/page/home/index',
+      title: `我${this.data.selectedTimeType.text}🧱${this.data.todaySummary.cummulative_total.text}，来瞅瞅你呢？`,
       imageUrl: '/images/bricklayer-pana.png'
     }
   },
