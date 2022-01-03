@@ -38,7 +38,6 @@ Page({
     })
   },
   drawPic() {
-    console.log(this.variable.userInfo);
     const height = wx.getSystemInfoSync().windowHeight;
     const width = wx.getSystemInfoSync().windowWidth;
     const views = [
@@ -55,13 +54,14 @@ Page({
 
       {
         type: 'text',
-        text: `${this.variable.selectedTimeType.text}`,
+        text: `${this.variable.selectedTimeType.text}`, // 时间区间
         css: {
           top: '48rpx',
           left: '48rpx',
           color: '#1485ee',
           fontWeight: 700,
           fontSize: '14px',
+          textDecoration: 'underline'
         }
       },
       {
@@ -77,19 +77,20 @@ Page({
         type: 'text',
         text: `${this.variable.userInfo.nickName}`, // 用户昵称
         css: {
-          top: '248rpx',
-          left: '600rpx',
-          fontSize: '14px',
+          top: '730rpx',
+          left: '270rpx',
+          fontSize: '17px',
+          color: '#ffffff'
         }
       },
-      {
-        type: 'image',
-        url: this.variable.userInfo.avatarUrl,
-        css: {
-          top: '48rpx',
-          left: '600rpx',
-        }
-      },
+      // {
+      //   type: 'image',
+      //   url: this.variable.userInfo.avatarUrl,
+      //   css: {
+      //     top: '48rpx',
+      //     left: '600rpx',
+      //   }
+      // },
       {
         type: 'text',
         text: `${this.variable.todaySummary.cummulative_total.text}`,
