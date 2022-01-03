@@ -1,6 +1,10 @@
 // index.js
 const app = getApp()
 
+function getSummaryText(title, dataset) {
+  return `${title}：${dataset[0].name}（${dataset[0].percent}%）`;
+}
+
 Page({
   data: {
     imgDraw: null,
@@ -32,11 +36,18 @@ Page({
     })
   },
   drawPic() {
+    const height = wx.getSystemInfoSync().windowHeight;
+    const width = wx.getSystemInfoSync().windowWidth;
     const views = [
       {
         type: 'image',
         url: 'https://static.1991421.cn/codetracker/bricklayer-pana.png',
-        css: {}
+        mode: 'aspectFill',
+        css: {
+          top: '564rpx',
+          left: '-110rpx',
+          width: '750rpx',
+        },
       },
       {
         type: 'text',
@@ -45,7 +56,8 @@ Page({
           top: '48rpx',
           left: '48rpx',
           color: '#1485ee',
-          fontWeight: 700
+          fontWeight: 700,
+          fontSize: '14px',
         }
       },
       {
@@ -53,14 +65,15 @@ Page({
         text: `已码字`,
         css: {
           top: '48rpx',
-          left: `${this.variable.selectedTimeType.text.length * 18 + 48}rpx`,
+          left: `${this.variable.selectedTimeType.text.length * 30 + 50}rpx`,
+          fontSize: '14px',
         }
       },
       {
         type: 'text',
         text: `${this.variable.todaySummary.cummulative_total.text}`,
         css: {
-          top: '70rpx',
+          top: '80rpx',
           left: '48rpx',
           fontSize: '22px',
           color: '#fa5151'
@@ -68,25 +81,16 @@ Page({
       },
       {
         type: 'text',
-        text: `参与项目：${this.variable.todaySummary.cummulative_total.text}`,
+        text: `${getSummaryText('参与项目', this.variable.todaySummary.data[0].projects)}`,
         css: {
-          top: '130rpx',
+          top: '140rpx',
           left: '48rpx',
           fontSize: '14px',
         }
       },
       {
         type: 'text',
-        text: `开发语言：${this.variable.todaySummary.cummulative_total.text}`,
-        css: {
-          top: '160rpx',
-          left: '48rpx',
-          fontSize: '14px',
-        }
-      },
-      {
-        type: 'text',
-        text: `编辑器：${this.variable.todaySummary.cummulative_total.text}`,
+        text: `${getSummaryText('开发语言', this.variable.todaySummary.data[0].languages)}`,
         css: {
           top: '190rpx',
           left: '48rpx',
@@ -95,9 +99,18 @@ Page({
       },
       {
         type: 'text',
-        text: `操作系统：${this.variable.todaySummary.cummulative_total.text}`,
+        text: `${getSummaryText('编辑器', this.variable.todaySummary.data[0].editors)}`,
         css: {
-          top: '220rpx',
+          top: '240rpx',
+          left: '48rpx',
+          fontSize: '14px',
+        }
+      },
+      {
+        type: 'text',
+        text: `${getSummaryText('操作系统', this.variable.todaySummary.data[0].operating_systems)}`,
+        css: {
+          top: '290rpx',
           left: '48rpx',
           fontSize: '14px'
         }
@@ -105,8 +118,10 @@ Page({
     ];
     this.setData({
       imgDraw: {
-        width: '750rpx',
-        height: '682rpx',
+        width: `${width * 2}rpx`,
+        height: `${height * 2 - 200}rpx`,
+        background: '#ededed',
+        // mode: 'scaleToFill',
         views,
       }
     })
