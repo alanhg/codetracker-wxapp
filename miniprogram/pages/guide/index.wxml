@@ -1,0 +1,17 @@
+<view class="center">WakaTime使用指南</view>
+<view class="center">接入指南</view>
+<view class="blockquote">
+    WakaTime是个全自动化的时间追踪工具，依赖于大量的IDE插件及文本编辑器，可以对我们从事coding活动所花费的时间进行可视化展示，让你明白在那些时间里，都做了什么。
+</view>
+<view class="h2">
+    1. 访问https://wakatime.com/login，注册账号
+</view>
+<view class="h2">
+    2. 访问https://wakatime.com/settings/account，拷贝API key
+    <image src="https://static.1991421.cn/2022/2022-01-03-220831.jpeg" mode="aspectFit"/>
+</view>
+<view class="h2">
+    3. 在WebStorm/Visual Studio Code等App下安装wakatime对应插件，输入`API key`
+    <image src="https://static.1991421.cn/2022/2022-01-03-220910.jpeg" mode="aspectFit"/>
+</view>
+<view class="h2">4. 之后在以上App下的代码操作都会被记录，访问wakatime网站或着该小程序即可查看统计情况</view>

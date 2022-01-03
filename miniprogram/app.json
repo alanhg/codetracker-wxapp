@@ -4,7 +4,8 @@
     "pages/home/index",
     "pages/dashboard/index",
     "pages/setting/index",
-    "pages/poster/index"
+    "pages/poster/index",
+    "pages/guide/index"
   ],
   "tabBar": {
     "list": [

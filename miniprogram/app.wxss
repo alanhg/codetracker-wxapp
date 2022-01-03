@@ -43,3 +43,20 @@ page {
     top: 40rpx;
     right: 38rpx;
 }
+
+.footer {
+    text-align: center;
+    font-size: 14px;
+    color: var(--weui-FG-1);
+    position: fixed;
+    bottom: 200rpx;
+    width: 100vw;
+}
+
+.center {
+    text-align: center;
+}
+
+.h2 {
+    padding-top: 10px;
+}

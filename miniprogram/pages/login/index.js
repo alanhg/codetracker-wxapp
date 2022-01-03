@@ -41,4 +41,9 @@ Page({
       url: `/pages/home/index`,
     });
   },
+  helpClick() {
+    wx.navigateTo({
+      url: '/pages/guide/index'
+    })
+  }
 });

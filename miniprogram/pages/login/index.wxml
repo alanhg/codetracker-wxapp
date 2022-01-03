@@ -1,14 +1,27 @@
-<mp-form-page subtitle="可视化展示你的编码活动" class="login-page">
-    <mp-toptips msg="{{errorMsg}}" type="error" show="{{errorMsg}}" delay="1500"></mp-toptips>
-    <label for="apiKey">
-        <view>
-            <textarea auto-height  id="apiKey" class="weui-input login-input"
-                   placeholder-class="weui-input__placeholder"
-                   placeholder="请输入WakaTime API Key" rows="3" spellcheck="false" bind:input="onInputBlur"
-                   bindconfirm="jumpPage"/>
-        </view>
-    </label>
-    <view slot="button">
+<mp-toptips msg="{{errorMsg}}" type="error" show="{{errorMsg}}" delay="1500"></mp-toptips>
+<div class="weui-form">
+    <div class="weui-form__text-area">
+        <h2 class="weui-form__title">可视化展示你的编码活动</h2>
+    </div>
+    <div class="weui-form__control-area">
+        <div class="weui-cells__group weui-cells__group_form">
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell weui-cell_active">
+                    <div class="weui-cell__bd">
+                        <textarea id="apiKey" class="weui-input login-input"
+                                  placeholder-class="weui-input__placeholder"
+                                  placeholder="请输入WakaTime API Key" rows="3" spellcheck="false"
+                                  bind:input="onInputBlur"
+                                  bindconfirm="jumpPage"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="weui-form__opr-area">
         <button class="weui-btn" type="primary" bindtap="jumpPage">确定</button>
-    </view>
-</mp-form-page>
+    </div>
+    <div class="footer">
+        WakaTime使用及API Key获取，戳这里<mp-icon icon="info" color="rgba(0, 0, 0, 0.5)" size="{{22}}" bind:tap="helpClick"></mp-icon>
+    </div>
+</div>
