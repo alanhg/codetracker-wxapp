@@ -1,3 +1,7 @@
+.collapse-item {
+    line-height: 32px;
+}
+
 .hidden {
     display: none;
 }

@@ -5,7 +5,7 @@
     height: 100vh;
     padding: 40rpx 16rpx;
     background-color: var(--weui-BG-0);
-    font-size: 14px;
+    font-size: 16px;
     overflow: hidden;
 }
 
@@ -13,6 +13,7 @@
     font-weight: 700;
     color: #1485ee;
     text-decoration: underline;
+    font-size: 20px;
 }
 
 .highlight {
