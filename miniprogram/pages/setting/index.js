@@ -1,12 +1,12 @@
 // index.js
-import {getDefaultTimeSpan, removeApiTokenKey, setApiTokenKey, setDefaultTimeSpan} from "../../utils";
+import {getApiTokenKey, getDefaultTimeSpan, removeApiTokenKey, setApiTokenKey, setDefaultTimeSpan} from "../../utils";
 
 Page({
   data: {
     // 选择的时间区间
     selectedTimeType: getDefaultTimeSpan(),
     showApiKeyConfirm: false,
-    apiKey: null
+    apiKey: getApiTokenKey()
   },
   jumpPage() {
     removeApiTokenKey();
@@ -22,10 +22,12 @@ Page({
     })
   },
   onApiKeyInputBlur: function ({detail: {value}}) {
-    this.setData({
-      showApiKeyConfirm: true,
-      apiKey: value.trim()
-    })
+    if (value.trim() !== this.data.apiKey) {
+      this.setData({
+        showApiKeyConfirm: true,
+        apiKey: value.trim()
+      })
+    }
   },
   timerSelectorShowClick: function () {
     const child = this.selectComponent('#timeSpanSelector');

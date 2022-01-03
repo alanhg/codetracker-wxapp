@@ -5,7 +5,7 @@
                 <text class="weui-label">API Key</text>
             </view>
             <view class="weui-cell__bd">
-                <input id="js_input1" class="weui-input" placeholder="******" bind:blur="onApiKeyInputBlur"/>
+                <input id="js_input1" class="weui-input" placeholder="******" bind:blur="onApiKeyInputBlur" value="{{apiKey}}"/>
             </view>
             <view class="weui-cell__ft"></view>
         </label>
