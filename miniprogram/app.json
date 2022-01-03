@@ -3,7 +3,8 @@
     "pages/login/index",
     "pages/home/index",
     "pages/dashboard/index",
-    "pages/setting/index"
+    "pages/setting/index",
+    "pages/poster/index"
   ],
   "tabBar": {
     "list": [
@@ -42,6 +43,7 @@
     "custom-collapse-item": "components/collapse-item/index",
     "custom-timespan-selector": "components/timespan-selector/index",
     "mp-cells": "weui-miniprogram/cells/cells",
-    "mp-cell": "weui-miniprogram/cell/cell"
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "painter":"components/painter/painter"
   }
 }

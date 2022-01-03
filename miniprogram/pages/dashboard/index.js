@@ -1,8 +1,6 @@
 // index.js
 import {api, formatDate, getDefaultTimeSpan, getTimeSpan, timeSelectorType} from "../../utils";
 
-const app = getApp();
-
 Page({
   data: {
     todaySummary: null,
@@ -44,7 +42,7 @@ Page({
     return {
       title: `我${this.data.selectedTimeType.text}搬砖${this.data.todaySummary.cummulative_total.text}`,
       desc: '来看看吧',
-      path: '/page/index', // 路径，传递参数到指定页面。
+      path: '/page/home/index', // 路径，传递参数到指定页面。
       imageUrl: '/images/bricklayer-pana.png'
     }
   },
@@ -56,5 +54,10 @@ Page({
   timerSelectorShowClick: function () {
     const child = this.selectComponent('#timeSpanSelector');
     child.timerSelectorShowClick();
+  },
+  sharePosterClick: function () {
+    wx.navigateTo({
+      url: '/pages/poster/index',
+    })
   }
 });

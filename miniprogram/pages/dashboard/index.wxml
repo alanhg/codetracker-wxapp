@@ -2,7 +2,8 @@
 <view class="page dashboard">
     <view class="weui-flex">
         <view wx:if="{{todaySummary}}" class="weui-flex__item">
-            <text class="timer" bind:tap="timerSelectorShowClick">{{selectedTimeType.text}}</text>你已码字
+            <text class="timer" bind:tap="timerSelectorShowClick">{{selectedTimeType.text}}</text>已码字
+            <image src="/images/share.png" class="share" bind:tap="sharePosterClick"/>
             <view class="highlight">
                 {{ todaySummary.cummulative_total.text }}
             </view>

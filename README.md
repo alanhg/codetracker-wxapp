@@ -6,3 +6,4 @@
 3. we-ui样式设计 https://github.com/Tencent/weui-wxss/tree/master/dist/example
 4. wakatime api
 5. https://developers.weixin.qq.com/miniprogram/design/
+6. https://github.com/Kujiale-Mobile/Painter

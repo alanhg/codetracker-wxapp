@@ -31,3 +31,15 @@
     color: #1485ee;
     text-decoration: underline;
 }
+
+page {
+    overflow-x: hidden;
+}
+
+.share {
+    width: 42rpx;
+    height: 42rpx;
+    position: absolute;
+    top: 40rpx;
+    right: 38rpx;
+}

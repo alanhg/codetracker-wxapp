@@ -15,12 +15,6 @@ App({
     //   });
     // }
     this.globalData = {
-      secretApiKey: getApiTokenKey(),
     };
-    if (this.globalData.secretApiKey) {
-      wx.redirectTo({
-        url: `/pages/home/index`,
-      });
-    }
   }
 });

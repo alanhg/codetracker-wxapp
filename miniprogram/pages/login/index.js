@@ -1,5 +1,5 @@
 // index.js
-import {setApiTokenKey} from "../../utils";
+import {getApiTokenKey, setApiTokenKey} from "../../utils";
 
 const app = getApp()
 
@@ -9,6 +9,16 @@ Page({
     errorMsg: null
   },
 
+  onLoad(query) {
+    app.globalData = {
+      secretApiKey: getApiTokenKey(),
+    };
+    if (app.globalData.secretApiKey) {
+      wx.redirectTo({
+        url: `/pages/home/index`,
+      });
+    }
+  },
   onInputBlur(e) {
     const key = e.detail.value;
     this.setData({
@@ -26,7 +36,7 @@ Page({
     this.setData({
       errorMsg: null
     })
-    setApiTokenKey(this.data.apiKey);
+    setApiTokenKey(this.data.apiKey.trim());
     wx.redirectTo({
       url: `/pages/home/index`,
     });
