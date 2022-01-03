@@ -28,9 +28,8 @@ Page({
   },
   onShareAppMessage: function () {
     return {
-      title: `我${this.data.selectedTimeType.text}搬砖${this.data.todaySummary.cummulative_total.text}`,
-      desc: '来看看吧',
-      path: '/page/home/index', // 路径，传递参数到指定页面。
+      title: `我${this.data.selectedTimeType.text}🧱${this.data.todaySummary.cummulative_total.text}，瞅瞅你呢？`,
+      path: '/page/home/index',
       imageUrl: '/images/bricklayer-pana.png'
     }
   },

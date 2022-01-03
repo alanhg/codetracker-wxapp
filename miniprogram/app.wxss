@@ -37,8 +37,8 @@ page {
 }
 
 .share {
-    width: 42rpx;
-    height: 42rpx;
+    width: 50rpx;
+    height: 50rpx;
     position: absolute;
     top: 40rpx;
     right: 38rpx;

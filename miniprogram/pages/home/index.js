@@ -20,12 +20,6 @@ Page({
       url: this.data.tabs[this.data.currentIdx].pagePath
     })
   },
-  onShareAppMessage() {
-    return {
-      title: '我已🧱xxx小时',
-      path: '/page/user?id=123'
-    }
-  },
   tabChange: function (event) {
     wx.switchTab({
       url: event.detail.item.pagePath,

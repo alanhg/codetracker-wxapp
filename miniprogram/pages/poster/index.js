@@ -23,10 +23,10 @@ Page({
     eventChannel.on('acceptDataFromOpenerPage', (data) => {
       this.variable.todaySummary = data.todaySummary;
       this.variable.selectedTimeType = data.selectedTimeType;
+      this.drawPic();
     })
   },
   onReady() {
-    this.drawPic();
   },
   onImgOK(e) {
     wx.hideLoading();
