@@ -1,2 +1,2 @@
 <image mode="widthFix" src="{{sharePath}}" show-menu-by-longpress="{{true}}"/>
-<painter palette="{{imgDraw}}" bind:imgOK="onImgOK"/>
+<painter style="position:fixed;top:-9999rpx" palette="{{imgDraw}}" bind:imgOK="onImgOK"/>

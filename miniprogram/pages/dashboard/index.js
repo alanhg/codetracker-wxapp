@@ -4,7 +4,6 @@ import {api, formatDate, getDefaultTimeSpan, getTimeSpan, timeSelectorType} from
 Page({
   data: {
     todaySummary: null,
-    selectedDetailType: null,
     // 选择的时间区间
     selectedTimeType: null,
   },
@@ -27,17 +26,6 @@ Page({
     });
     wx.hideLoading();
   },
-  onDetailClick: function (e) {
-    if (this.data.selectedDetailType === e.currentTarget.dataset.type) {
-      this.setData({
-        selectedDetailType: null
-      })
-    } else {
-      this.setData({
-        selectedDetailType: e.currentTarget.dataset.type
-      })
-    }
-  },
   onShareAppMessage: function () {
     return {
       title: `我${this.data.selectedTimeType.text}搬砖${this.data.todaySummary.cummulative_total.text}`,
@@ -57,7 +45,14 @@ Page({
   },
   sharePosterClick: function () {
     wx.navigateTo({
-      url: '/pages/poster/index',
-    })
+        url: '/pages/poster/index',
+        success: (res) => {
+          res.eventChannel.emit('acceptDataFromOpenerPage', {
+            todaySummary: this.data.todaySummary,
+            selectedTimeType: this.data.selectedTimeType,
+          })
+        }
+      },
+    )
   }
 });
