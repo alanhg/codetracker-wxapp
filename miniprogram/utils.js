@@ -24,6 +24,14 @@ export function getDefaultTimeSpan() {
   return wx.getStorageSync("defaultTimeSpan") || timeSelectorType.today
 }
 
+export function setUserInfo(userInfo) {
+  wx.setStorageSync("userInfo", userInfo)
+}
+
+export function getUserInfo() {
+  return wx.getStorageSync("userInfo")
+}
+
 const stringify = params => Object.keys(params).map(k => k + '=' + params[k]).join('&');
 const requestWakaTime = ({method = 'get', data, url, params = {}}) => new Promise((resolve, reject) => {
     wx.request({

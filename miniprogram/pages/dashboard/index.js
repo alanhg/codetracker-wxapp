@@ -1,5 +1,13 @@
 // index.js
-import {api, formatDate, getDefaultTimeSpan, getTimeSpan, timeSelectorType} from "../../utils";
+import {
+  api,
+  formatDate,
+  getDefaultTimeSpan,
+  getTimeSpan,
+  getUserInfo,
+  setUserInfo,
+  timeSelectorType
+} from "../../utils";
 
 Page({
   data: {
@@ -42,12 +50,30 @@ Page({
     child.timerSelectorShowClick();
   },
   sharePosterClick: function () {
+    let userInfo = getUserInfo();
+    if (userInfo) {
+      this.goToPosterPage(userInfo);
+      return;
+    }
+    wx.getUserProfile({
+      desc: '用于海报展示',
+      fail: () => {
+
+      },
+      success: ({userInfo}) => {
+        setUserInfo(userInfo);
+        this.goToPosterPage(userInfo);
+      }
+    });
+  },
+  goToPosterPage: function (userInfo) {
     wx.navigateTo({
         url: '/pages/poster/index',
         success: (res) => {
           res.eventChannel.emit('acceptDataFromOpenerPage', {
             todaySummary: this.data.todaySummary,
             selectedTimeType: this.data.selectedTimeType,
+            userInfo
           })
         }
       },

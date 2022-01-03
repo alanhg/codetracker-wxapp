@@ -14,6 +14,7 @@ Page({
   variable: {
     todaySummary: null,
     selectedTimeType: null,
+    userInfo: null
   },
   onLoad(query) {
     wx.showLoading({
@@ -23,6 +24,7 @@ Page({
     eventChannel.on('acceptDataFromOpenerPage', (data) => {
       this.variable.todaySummary = data.todaySummary;
       this.variable.selectedTimeType = data.selectedTimeType;
+      this.variable.userInfo = data.userInfo;
       this.drawPic();
     })
   },
@@ -36,6 +38,7 @@ Page({
     })
   },
   drawPic() {
+    console.log(this.variable.userInfo);
     const height = wx.getSystemInfoSync().windowHeight;
     const width = wx.getSystemInfoSync().windowWidth;
     const views = [
@@ -49,6 +52,7 @@ Page({
           width: '1000rpx',
         },
       },
+
       {
         type: 'text',
         text: `${this.variable.selectedTimeType.text}`,
@@ -67,6 +71,23 @@ Page({
           top: '48rpx',
           left: `${this.variable.selectedTimeType.text.length * 30 + 50}rpx`,
           fontSize: '14px',
+        }
+      },
+      {
+        type: 'text',
+        text: `${this.variable.userInfo.nickName}`, // 用户昵称
+        css: {
+          top: '248rpx',
+          left: '600rpx',
+          fontSize: '14px',
+        }
+      },
+      {
+        type: 'image',
+        url: this.variable.userInfo.avatarUrl,
+        css: {
+          top: '48rpx',
+          left: '600rpx',
         }
       },
       {
