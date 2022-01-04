@@ -45,5 +45,10 @@ Page({
     wx.redirectTo({
       url: '/pages/login/index'
     })
+  },
+  helpClick: function () {
+    wx.navigateTo({
+      url: '/pages/guide/index'
+    })
   }
 });

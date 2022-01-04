@@ -21,6 +21,19 @@
             </view>
         </label>
     </view>
+    <view class="weui-cells">
+        <label for="js_input2" class="weui-cell weui-cell_access">
+            <view class="weui-cell__hd">
+                <text class="weui-label">使用指南</text>
+            </view>
+            <view class="weui-cell__bd hidden" bind:tap="helpClick">
+                详细信息
+            </view>
+            <view class="weui-cell__ft" bind:tap="helpClick">
+                详细信息
+            </view>
+        </label>
+    </view>
     <button bind:tap="logoutClick" class="weui-btn weui-btn_default mt-4n">退出</button>
 </view>
 <mp-dialog show="{{showApiKeyConfirm}}" buttons="{{[{text:'确定'}]}}" bindbuttontap="onApiKeyConfirm">

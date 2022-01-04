@@ -1,9 +1,13 @@
 // index.js
-import {getApiTokenKey} from "../../utils";
 
 Page({
   data: {},
   onLoad(query) {
 
+  },
+  onShareAppMessage: function () {
+    return {
+      title: `CodeTracker使用指南`
+    }
   }
 });

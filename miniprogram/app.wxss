@@ -72,3 +72,7 @@ page {
 .mt-4n {
     margin-top: 20rpx;
 }
+
+.hidden {
+    opacity: 0;
+}
