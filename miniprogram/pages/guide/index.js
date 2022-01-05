@@ -7,7 +7,7 @@ Page({
   },
   onShareAppMessage: function () {
     return {
-      title: `CodeTracker使用指南`
+      title: `使用指南📚`
     }
   }
 });
