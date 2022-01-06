@@ -1,13 +1,5 @@
 // index.js
-import {
-  api,
-  formatDate,
-  getDefaultTimeSpan,
-  getTimeSpan,
-  getUserInfo,
-  setUserInfo,
-  timeSelectorType
-} from "../../utils";
+import {api, formatDate, getDefaultTimeSpan, getTimeSpan, getUserInfo, setUserInfo} from "../../utils";
 
 Page({
   data: {

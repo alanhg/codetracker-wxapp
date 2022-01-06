@@ -10,10 +10,16 @@
         </view>
     </view>
     <view class="dashboard-body">
-        <custom-collapse-item id="project" title="参与项目" dataset="{{todaySummary.data[0].projects}}"/>
-        <custom-collapse-item id="languages" title="开发语言" dataset="{{todaySummary.data[0].languages}}"/>
-        <custom-collapse-item id="editors" title="编辑器" dataset="{{todaySummary.data[0].editors}}"/>
-        <custom-collapse-item id="operating_systems" title="操作系统" dataset="{{todaySummary.data[0].operating_systems}}"/>
+        <view wx:if="{{todaySummary.cummulative_total.seconds===0}}">
+        开💻 搞起来！
+        </view>
+        <view wx:else>
+            <custom-collapse-item id="project" title="参与项目" dataset="{{todaySummary.data[0].projects}}"/>
+            <custom-collapse-item id="languages" title="开发语言" dataset="{{todaySummary.data[0].languages}}"/>
+            <custom-collapse-item id="editors" title="编辑器" dataset="{{todaySummary.data[0].editors}}"/>
+            <custom-collapse-item id="operating_systems" title="操作系统"
+                                  dataset="{{todaySummary.data[0].operating_systems}}"/>
+        </view>
     </view>
     <custom-timespan-selector bindselectevent="timerSelectorClick" id="timeSpanSelector"/>
 </view>
