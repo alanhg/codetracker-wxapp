@@ -6,7 +6,8 @@ const app = getApp()
 Page({
   data: {
     apiKey: null,
-    errorMsg: null
+    errorMsg: null,
+    version: app.globalData.version
   },
 
   onLoad(query) {

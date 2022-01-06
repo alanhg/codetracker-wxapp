@@ -25,5 +25,8 @@
     <div class="footer">
         WakaTime使用及API Key获取，戳这里
         <mp-icon icon="info" color="rgba(0, 0, 0, 0.5)" size="{{22}}" bind:tap="helpClick"></mp-icon>
+        <view class="mt-1n">
+            build: {{version}}
+        </view>
     </div>
 </div>

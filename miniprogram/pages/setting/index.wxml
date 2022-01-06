@@ -33,6 +33,14 @@
                 详细信息
             </view>
         </label>
+        <label for="js_input2" class="weui-cell weui-cell_access">
+            <view class="weui-cell__hd">
+                <text class="weui-label">版本号</text>
+            </view>
+            <view class="weui-cell__bd">
+                {{version}}
+            </view>
+        </label>
     </view>
     <button bind:tap="logoutClick" class="weui-btn weui-btn_default mt-4n">退出</button>
 </view>

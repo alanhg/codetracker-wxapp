@@ -1,4 +1,3 @@
-import {getApiTokenKey} from "./utils";
 // app.js
 App({
   onLaunch: function () {
@@ -14,7 +13,9 @@ App({
     //     traceUser: true,
     //   });
     // }
+    let miniProgram = wx.getAccountInfoSync().miniProgram;
     this.globalData = {
+      version: miniProgram.version ? `v${miniProgram.version}` : miniProgram.envVersion
     };
   }
 });

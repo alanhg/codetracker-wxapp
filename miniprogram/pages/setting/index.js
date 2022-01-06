@@ -6,7 +6,10 @@ Page({
     // 选择的时间区间
     selectedTimeType: getDefaultTimeSpan(),
     showApiKeyConfirm: false,
-    apiKey: getApiTokenKey()
+    apiKey: getApiTokenKey(),
+    version: getApp().globalData.version
+  },
+  onLoad(query) {
   },
   jumpPage() {
     removeApiTokenKey();
