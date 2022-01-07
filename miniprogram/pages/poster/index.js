@@ -26,6 +26,10 @@ Page({
       this.variable.selectedTimeType = data.selectedTimeType;
       this.variable.userInfo = data.userInfo;
       this.drawPic();
+    });
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
     })
   },
   onReady() {
@@ -147,5 +151,17 @@ Page({
         views,
       }
     })
-  }
+  },
+  onShareAppMessage: function () {
+    return {
+      title: `我${this.variable.selectedTimeType.text}🧱${this.variable.todaySummary.cummulative_total.text}。`,
+      imageUrl: this.data.sharePath
+    }
+  },
+  onShareTimeline: function () {
+    return {
+      title: `我${this.variable.selectedTimeType.text}🧱${this.variable.todaySummary.cummulative_total.text}。`,
+      imageUrl: this.data.sharePath
+    }
+  },
 });
