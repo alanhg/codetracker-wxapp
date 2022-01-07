@@ -51,7 +51,26 @@ Page({
           width: '1000rpx',
         },
       },
-
+      {
+        type: 'image',
+        url: this.variable.userInfo.avatarUrl,
+        mode: 'aspectFill',
+        css: {
+          top: '24rpx',
+          right: '25rpx',
+          width: `${100}rpx`,
+          borderRadius: `${100 / 2}rpx`
+        },
+      },
+      {
+        type: 'text',
+        text: `${this.variable.userInfo.nickName}`, // 用户昵称
+        css: {
+          top: '125rpx',
+          right: '20rpx',
+          fontSize: '17px',
+        }
+      },
       {
         type: 'text',
         text: `${this.variable.selectedTimeType.text}`, // 时间区间
@@ -60,7 +79,7 @@ Page({
           left: '48rpx',
           color: '#1485ee',
           fontWeight: 700,
-          fontSize: '14px',
+          fontSize: '20px',
           textDecoration: 'underline'
         }
       },
@@ -68,34 +87,16 @@ Page({
         type: 'text',
         text: `已码字`,
         css: {
-          top: '48rpx',
-          left: `${this.variable.selectedTimeType.text.length * 30 + 50}rpx`,
-          fontSize: '14px',
+          top: '52rpx',
+          left: `${this.variable.selectedTimeType.text.length * 40 + 50}rpx`,
+          fontSize: '16px',
         }
       },
-      {
-        type: 'text',
-        text: `${this.variable.userInfo.nickName}`, // 用户昵称
-        css: {
-          top: '730rpx',
-          left: '270rpx',
-          fontSize: '17px',
-          color: '#ffffff'
-        }
-      },
-      // {
-      //   type: 'image',
-      //   url: this.variable.userInfo.avatarUrl,
-      //   css: {
-      //     top: '48rpx',
-      //     left: '600rpx',
-      //   }
-      // },
       {
         type: 'text',
         text: `${this.variable.todaySummary.cummulative_total.text}`,
         css: {
-          top: '80rpx',
+          top: '100rpx',
           left: '48rpx',
           fontSize: '22px',
           color: '#fa5151'
@@ -105,36 +106,36 @@ Page({
         type: 'text',
         text: `${getSummaryText('参与项目', this.variable.todaySummary.data[0].projects)}`,
         css: {
-          top: '140rpx',
+          top: '160rpx',
           left: '48rpx',
-          fontSize: '14px',
+          fontSize: '16px',
         }
       },
       {
         type: 'text',
         text: `${getSummaryText('开发语言', this.variable.todaySummary.data[0].languages)}`,
         css: {
-          top: '190rpx',
+          top: '220rpx',
           left: '48rpx',
-          fontSize: '14px',
+          fontSize: '16px',
         }
       },
       {
         type: 'text',
         text: `${getSummaryText('编辑器', this.variable.todaySummary.data[0].editors)}`,
         css: {
-          top: '240rpx',
+          top: '280rpx',
           left: '48rpx',
-          fontSize: '14px',
+          fontSize: '16px',
         }
       },
       {
         type: 'text',
         text: `${getSummaryText('操作系统', this.variable.todaySummary.data[0].operating_systems)}`,
         css: {
-          top: '290rpx',
+          top: '340rpx',
           left: '48rpx',
-          fontSize: '14px'
+          fontSize: '16px'
         }
       }
     ];
@@ -143,7 +144,6 @@ Page({
         width: `${width * 2}rpx`,
         height: `${height * 2 - 200}rpx`,
         background: '#ededed',
-        // mode: 'scaleToFill',
         views,
       }
     })
