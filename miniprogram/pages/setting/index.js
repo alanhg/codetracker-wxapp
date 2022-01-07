@@ -1,13 +1,14 @@
 // index.js
 import {getApiTokenKey, getDefaultTimeSpan, removeApiTokenKey, setApiTokenKey, setDefaultTimeSpan} from "../../utils";
 
+const app = getApp();
 Page({
   data: {
     // 选择的时间区间
     selectedTimeType: getDefaultTimeSpan(),
     showApiKeyConfirm: false,
     apiKey: getApiTokenKey(),
-    version: getApp().globalData.version
+    version: app.globalData.version
   },
   onLoad(query) {
   },
@@ -45,6 +46,8 @@ Page({
   },
   logoutClick: function () {
     removeApiTokenKey();
+    app.globalData.secretApiKey = null;
+
     wx.redirectTo({
       url: '/pages/login/index'
     })
