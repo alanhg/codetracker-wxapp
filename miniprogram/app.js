@@ -17,5 +17,11 @@ App({
     this.globalData = {
       version: miniProgram.version ? `v${miniProgram.version}` : miniProgram.envVersion
     };
+  }, onShow: function (option) {
+    if (!this.globalData.secretApiKey) {
+      wx.redirectTo({
+        url: `/pages/login/index`,
+      });
+    }
   }
 });
