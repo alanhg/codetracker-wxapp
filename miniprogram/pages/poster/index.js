@@ -155,13 +155,15 @@ Page({
   onShareAppMessage: function () {
     return {
       title: `我${this.variable.selectedTimeType.text}🧱${this.variable.todaySummary.cummulative_total.text}。`,
-      imageUrl: this.data.sharePath
+      imageUrl: this.data.sharePath,
+      path: 'pages/home/index'
     }
   },
   onShareTimeline: function () {
     return {
       title: `我${this.variable.selectedTimeType.text}🧱${this.variable.todaySummary.cummulative_total.text}。`,
-      imageUrl: this.data.sharePath
+      imageUrl: this.data.sharePath,
+      path: 'pages/home/index'
     }
   },
 });
